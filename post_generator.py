@@ -15,6 +15,7 @@ def get_length_str(length):
 
 def generate_post(length, language, tag):
     prompt = get_prompt(length, language, tag)
+    print("DEBUG: Prompt being sent to Groq API ->", prompt)
     response = llm.invoke(prompt)
     return response.content
 
